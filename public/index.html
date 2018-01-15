@@ -5,58 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
-    <title>SVG Anim</title>
+    <title>Layout exercises</title>
 </head>
 <body>
+    <div class="wrapper">
 
-    
-    <div id="app"></div>
-    <div>
-            <svg  id="rectangle" width="200px" height="100px" viewBox="0 0 200 100">
-       <path fill="#36A9E1" d="M200,75H0V25c0,0,33.316,22.803,101.009,22.803S200,25,200,25V75z">
-        <animate id="onScroll" begin="indefinite" fill="freeze" attributeName="d" dur="1000ms" to="M200,75H0V25c0,0,33.316,4.513,101.009,4.513S200,25,200,25V75z"/>
-       </svg>
+    <header  class = "header">
+        
+            <h1>when life gives you lemons...</h1>
+        <div class="logo">
+        
+        </div>
+    </header>
+    <main>
+        <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur semper augue eget mollis. Nunc eget maximus metus, sed mollis est. Nunc nec tincidunt erat. Praesent pulvinar eros eu magna fermentum tempor. Nam varius sodales elit, in bibendum nulla consequat nec. Morbi at finibus ante. Ut at sagittis nisi. Cras leo lacus, malesuada non accumsan vestibulum, ultrices in mi. Donec lacus justo, euismod ac rhoncus et, suscipit ut risus. Curabitur posuere ex sollicitudin, venenatis nisl at, ultrices elit. Cras nec condimentum sem. Aliquam pharetra nulla volutpat rutrum efficitur. Donec magna erat, pretium sed nisl sit amet, auctor pulvinar tortor. In tincidunt ullamcorper dui semper blandit. Sed vulputate ultrices nisl eget iaculis.
+        </p>
+
+    </main>
+    <div class="sidebar">
+        <ul>
+            <li>main</li>
+            <li>gallery</li>
+            <li>contact</li>
+        </ul>
     </div>
-    <button id="button">
-  
-  <svg viewBox="0 0 194.6 185.1">
-    
-    <polygon fill="#FFD41D" points="97.3,0 127.4,60.9 194.6,70.7 145.9,118.1 157.4,185.1 97.3,153.5 37.2,185.1 48.6,118.1 0,70.7 67.2,60.9">
-      
-      <animate id="animationCheck" begin="indefinite" fill="freeze" attributeName="points" dur="500ms" to="110,58.2 147.3,0 192.1,29 141.7,105.1 118.7,139.8 88.8,185.1 46.1,156.5 0,125 23.5,86.6 71.1,116.7"/>
-     
-    </polygon>
-    
-  </svg>
-
- 
-  
-  <span id="button-text">Save</span>
-  
-</button>
-<button id="blobContainer">
-    <svg  width="150px" height="150px" viewBox="0 0 150 150" >
-        <path  fill="#60FCAA" d="M128.775,92.71c0,29.7-24.076,36.065-53.775,36.065S21.225,122.41,21.225,92.71 c0-29.699,24.076-45.239,53.775-45.239S128.775,63.011,128.775,92.71z">
-        <animate id="blobAnim" begin="indefinite" fill="freeze" attributeName="d" dur="500ms" to="M128.775,75c0, 29.7-24.076,53.776-53.775,53.776S21.225,104.699,21.225,75 c0-29.699,24.076,6.187,53.775,6.187S128.775,45.301,128.775,75z"/>
-    </svg>
-</button>
-<button id="exitButton">
-<svg width="100px" height="100px" viewBox="0 0 100 100">
-    <path fill="none" stroke="#000000" stroke-width="8" stroke-linecap="round" d="M50,10 c22.092,0,40,17.909,40,40c0,22.092-17.908,40-40,40c-22.091,0-40-17.908-40-40C10,27.909,27.909,10,50,10">
-    <animate id="exitAnim2" begin="indefinite" fill="freeze" attributeName="d" dur="500ms" to="M 20 50 L 80 50  z"/></path>
-    
-    <path  fill="none" stroke="#000000" stroke-width="8" stroke-linecap="round"   d="M 30 30 L 70 70 z">
-    <animate id="exitAnim1" begin="indefinite" fill="freeze" attributeName="d" dur="500ms" to="M 20 20 L 80 20 z"/></path>
-    <path  fill="none" stroke="#000000" stroke-width="8" stroke-linecap="round"   d="M 70 30 L 30 70 z">
-            <animate id="exitAnim3" begin="indefinite" fill="freeze" attributeName="d" dur="500ms" to="M 20 80 L 80 80 z"/></path>  
-    </path>
-
- 
-
-</svg>
-</button>
-
+<footer>Photo by J. Kelly Brito on Unsplash</footer>
+</div>
     
     <script src="/out.js" charset="utf-8"></script>
+    
 </body>
 </html>
