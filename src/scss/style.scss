@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
+  list-style-type: none;
 }
 a{
   text-decoration: none;
@@ -35,15 +36,24 @@ header span{
   display: grid;
   width: 100%;
   margin: 0;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas: 
     "nav nav nav"
     "header header header"
-    "main sidebar sidebar"
+    "main main sidebar"
     "footer footer footer";
 }
-
+main{
+  grid-area: main;
+  height: 100vh;
+  padding: 20vh;
+}
+.sidebar{
+  grid-area: sidebar;
+  height: 100vh;
+  padding: 20vh;
+}
 .accent--color{
   background-color: #6163d2
 }
@@ -105,7 +115,7 @@ main{
     background-color: #f1cbff;
     transition: all 1s ease
   }
-  .scrollDown__button{
+  .up, .down{
     display: none;
   }
 }
@@ -118,22 +128,37 @@ main{
 
 }
 
-.scrollDown__button{
-  width: 4vw;
-  height: 4vw;
+.down,.up{
+  width: 40px;
+  height: 40px;
   color: #FFF;
   border-radius: 50%;
   position: fixed;
-  bottom: 10px;
   margin-left: 48vw;
   font-size: 0.7rem;
-  padding: 1.5vw 0;
+  padding: 10px;
   text-align: center;
+}
+.down{
+  top: 10px;
+}
+.up{
+  bottom: 10px;
+}
+.down:hover, .up:hover{
+  background-color: #ff6565
 }
 
 footer{
+  display: flex;
+  justify-content: space-between;
   background-color: #2e1e1f;
   color: #FFF;
   grid-area: footer;
-  font-size: .5rem
+  font-size: .5rem;
+  padding: 2px;
+  li{
+    display: inline;
+    padding: 0 4px;
+  }
 }
