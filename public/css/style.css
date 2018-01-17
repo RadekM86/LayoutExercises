@@ -2,83 +2,132 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Roboto, sans-serif; }
+  font-family: Roboto, sans-serif;
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  color: #FFF; }
 
 html {
   font-size: 20px; }
 
 body {
   font-size: 1rem;
-  background-color: #f1cbff; }
+  background-color: #eaeaea; }
 
 header {
   grid-area: header;
-  background-color: #c9c9ff;
-  height: 50vh;
-  padding: 20vh;
+  background-color: #eaeaea;
+  width: 100%;
+  height: 90vh;
   text-align: center;
-  background-image: url("https://images.unsplash.com/photo-1508254919937-d4a498e3366c?auto=format&fit=crop&w=1950&q=80");
+  background-image: url("https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?auto=format&fit=crop&w=1950&q=80");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }
 
+header span {
+  line-height: 90vh; }
+
 .wrapper {
   display: grid;
-  max-width: 1000px;
-  margin: 0 auto;
-  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  margin: 0;
+  grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "header header header" "main main sidebar" "footer footer footer"; }
+  grid-template-areas: "nav nav nav" "header header header" "main main sidebar" "footer footer footer"; }
+
+main {
+  grid-area: main;
+  height: 100vh;
+  padding: 20vh; }
+
+.sidebar {
+  grid-area: sidebar;
+  height: 100vh;
+  padding: 20vh; }
+
+.accent--color {
+  background-color: #6163d2; }
+
+.accent--text {
+  color: #6163d2; }
+
+nav {
+  grid-area: nav;
+  background-color: #2e1e1f;
+  color: #FFF;
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+  align-content: space-between; }
+  nav ul {
+    align-self: flex-end; }
+    nav ul li {
+      padding: 2px 10px;
+      list-style-type: none;
+      display: inline; }
+
+.sidebar {
+  grid-area: sidebar;
+  width: 10vw; }
+
+main {
+  grid-area: main;
+  text-orientation: sideways; }
 
 @media (min-width: 400px) {
-  body {
-    background-color: #ffbdbd;
-    transition: all 1s ease; }
-  .wrapper {
-    grid-template-columns: 1fr;
-    grid-template-areas: "header" "sidebar" "main" "footer"; } }
-
-@media (max-width: 400px) {
   .sidebar li {
     padding: 10px;
     display: inline; } }
 
-@media (min-width: 680px) {
+@media (max-width: 680px) {
   body {
     transition: all 1s ease; }
   .wrapper {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "header header" "main sidebar" "footer footer"; } }
+    grid-template-areas: "nav nav nav" "header header header" "main main sidebar" "footer footer footer"; } }
 
-@media (min-width: 800px) {
+@media (max-width: 1000px) {
   body {
     background-color: #f1cbff;
     transition: all 1s ease; }
-  .wrapper {
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "header header" "main sidebar" "footer footer"; } }
+  .up, .down {
+    display: none; } }
 
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
   body {
     background-color: #c9c9ff;
-    transition: all 1s ease; }
-  .wrapper {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "header header sidebar" "main main sidebar" "footer footer footer"; } }
+    transition: all 1s ease; } }
 
-main {
-  grid-area: main;
-  background-color: #f1cbff; }
+.down, .up {
+  width: 40px;
+  height: 40px;
+  color: #FFF;
+  border-radius: 50%;
+  position: fixed;
+  margin-left: 48vw;
+  font-size: 0.7rem;
+  padding: 10px;
+  text-align: center; }
 
-.sidebar {
-  grid-area: sidebar;
-  background-color: #e1f7d5; }
-  .sidebar ul li {
-    display: block; }
+.down {
+  top: 10px; }
+
+.up {
+  bottom: 10px; }
+
+.down:hover, .up:hover {
+  background-color: #ff6565; }
 
 footer {
-  background-color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  background-color: #2e1e1f;
+  color: #FFF;
   grid-area: footer;
-  font-size: .5rem; }
+  font-size: .5rem;
+  padding: 2px; }
+  footer li {
+    display: inline;
+    padding: 0 4px; }

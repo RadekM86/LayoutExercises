@@ -53,6 +53,12 @@ main{
   grid-area: sidebar;
   height: 100vh;
   padding: 20vh;
+  display: grid;
+}
+.motto{
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 20px;
 }
 .accent--color{
   background-color: #6163d2
@@ -109,16 +115,38 @@ main{
 }
 
 }
+.buy{
+  width: 20vw;
+  display: block;
+  background-color: #6163d2;
+  padding: 20px;
+  text-align: center;
+}
+.buy:hover{
+  background-color: #ff6565;
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
+.price{
+  font-weight: 700;
+  font-size: 3rem;
+}
 
 @media (max-width: 1000px) {
   body {
     background-color: #f1cbff;
     transition: all 1s ease
   }
-  .up, .down{
-    display: none;
-  }
+ 
 }
+
+@keyframes jump{
+  0% {transform: translateY(0px)}
+  33%{transform: translateY(-12px)}
+  66%{transform: translateY(10px)}
+  100%{transform: translateY(0px)}
+} 
 
 @media (max-width: 1200px) {
   body {
@@ -138,12 +166,15 @@ main{
   font-size: 0.7rem;
   padding: 10px;
   text-align: center;
+  transition: all 1s ease;
+  animation: jump 2s infinite;
 }
 .down{
-  top: 10px;
+  bottom: 10px;
 }
 .up{
   bottom: 10px;
+  display:none;
 }
 .down:hover, .up:hover{
   background-color: #ff6565
