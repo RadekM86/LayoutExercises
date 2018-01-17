@@ -5,10 +5,7 @@
   font-family: Roboto, sans-serif;
   list-style-type: none;
 }
-a{
-  text-decoration: none;
-  color: #FFF;
-}
+
 html{
   font-size: 20px;
 }
@@ -32,11 +29,20 @@ header{
 header span{
     line-height: 90vh;
 }
+a{
+  text-decoration: none;
+  color: #FFF;
+  padding: 5px;
+}
+a:hover{
+  background-color: #6163d2;
+}
+
 .wrapper{
   display: grid;
   width: 100%;
   margin: 0;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 2fr;
   grid-template-rows: auto;
   grid-template-areas: 
     "nav nav nav"
@@ -67,6 +73,14 @@ main{
   color: #6163d2
 }
 
+.carousel{
+  width: 20vw;
+  height: 250px;
+  background-image: url("https://images.unsplash.com/photo-1467043153537-a4fba2cd39ef?auto=format&fit=crop&w=1861&q=80");
+  background-size: cover;
+
+}
+
 nav{
   grid-area: nav;
   background-color: #2e1e1f;
@@ -87,7 +101,6 @@ nav{
 
 .sidebar{
   grid-area: sidebar;
-  width: 10vw;
 }
 main{
   grid-area: main;
