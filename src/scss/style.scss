@@ -55,17 +55,7 @@ main{
   height: 100vh;
   padding: 20vh;
 }
-.sidebar{
-  grid-area: sidebar;
-  height: 100vh;
-  padding: 20vh;
-  display: grid;
-}
-.motto{
-  font-size: 1.2rem;
-  text-align: center;
-  padding: 20px;
-}
+
 .accent--color{
   background-color: #6163d2
 }
@@ -74,11 +64,33 @@ main{
 }
 
 .carousel{
-  width: 20vw;
-  height: 250px;
+  width: 50vw;
+  height: 100vw;
   background-image: url("https://images.unsplash.com/photo-1467043153537-a4fba2cd39ef?auto=format&fit=crop&w=1861&q=80");
+  background-position: bottom;
   background-size: cover;
-
+  font-size: 1.2rem;
+  text-align: center;
+  width: 50vw;
+  height: 100vh;
+  line-height: 50vh;
+  transition: all 1s ease;
+  .motto{
+    font-weight: 700;
+    font-size: 5vh;
+    line-height: 100vh;
+    span{
+      font-weight: 500;
+    }
+  }
+}
+.carousel:hover{
+  filter: hue-rotate(210deg)
+}
+.motto:hover{
+  opacity: 1;
+  background-blend-mode: multiply;
+  transition: all 1s ease;
 }
 
 nav{
@@ -99,9 +111,7 @@ nav{
   }
 }
 
-.sidebar{
-  grid-area: sidebar;
-}
+
 main{
   grid-area: main;
   text-orientation: sideways;
@@ -123,22 +133,26 @@ main{
   grid-template-areas: 
   "nav nav nav"
   "header header header"
-  "main main sidebar"
+  "main sidebar sidebar"
   "footer footer footer";
 }
 
 }
 .buy{
   width: 20vw;
+  font-size: 1.2rem;
+  font-weight: 700;
   display: block;
   background-color: #6163d2;
   padding: 20px;
+  margin: 20px 0;
   text-align: center;
 }
 .buy:hover{
-  background-color: #ff6565;
+  background: linear-gradient(#ff6565, #f17676);
   transition: all .5s ease;
   cursor: pointer;
+  box-shadow: 0 0 50px #f17676
 }
 
 .price{
@@ -157,7 +171,7 @@ main{
 @keyframes jump{
   0% {transform: translateY(0px)}
   33%{transform: translateY(-12px)}
-  66%{transform: translateY(10px)}
+  66%{transform: translateY(8px)}
   100%{transform: translateY(0px)}
 } 
 
@@ -180,7 +194,7 @@ main{
   padding: 10px;
   text-align: center;
   transition: all 1s ease;
-  animation: jump 2s infinite;
+  animation: jump 4s infinite;
 }
 .down{
   bottom: 10px;

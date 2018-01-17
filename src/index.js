@@ -3,6 +3,7 @@ import { setInterval } from "timers";
 
 document.addEventListener("DOMContentLoaded", function() {
     $(document).ready(function() {
+       
         $(".down").click(function() {
              $('html, body').animate({
                  scrollTop: $("footer").offset().top
@@ -28,7 +29,10 @@ document.addEventListener("DOMContentLoaded", function() {
             };
         setInterval(text, 5000)
         
-        
+        $(".buyTop").click(function() {
+            $('html, body').animate({
+                scrollTop: $(".buy").offset().top
+            }, 1500)})
                  
 
 
