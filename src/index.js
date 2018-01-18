@@ -33,10 +33,14 @@ document.addEventListener("DOMContentLoaded", function() {
             $('html, body').animate({
                 scrollTop: $(".buy").offset().top
             }, 1500)})
-                 
+            $(".buy").click(function(){
+                $(".form").slideToggle()
+            })
+           $(".submit").click(function(e){
+                e.preventDefault()
+           })
 
-
-                                            
+                                        
                         
                         
             

@@ -182,7 +182,32 @@ main{
   }
 
 }
+.form{
+  input{
+    width: 250px;
+    height: 40px;
+    padding: 4px;
+  }
+  input:focus{
+    border: 2px solid #ff6565;
+    background-color: #EEE; 
+  } 
+  input[type=submit]{
+    background-color: #6163d2;
+    border: none;
+  }
+  input[type=submit]:hover{
+    background-color: #ff6565;
+    box-shadow: 0 0 10px #ff6565
+  }
 
+}
+
+
+
+.hidden{
+  display: none;
+}
 .down,.up{
   width: 40px;
   height: 40px;
