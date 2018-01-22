@@ -53,8 +53,14 @@ a:hover{
 main{
   grid-area: main;
   height: 100vh;
-  padding: 20vh;
+  padding: 10vh;
 }
+
+.path {
+  stroke-dashoffset: 1250;
+  stroke-dasharray: 1000;
+}
+
 
 .accent--color{
   background-color: #6163d2
