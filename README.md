@@ -9,3 +9,6 @@ Using selectors and functions to animate website and add more functionalities
 
 #flexbox
 Using display:flex for displaying galleries and other content packed divs
+
+#svg
+Vector animation for drawing lines, moving elements and morphing vector objects
