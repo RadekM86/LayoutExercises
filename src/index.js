@@ -34,9 +34,17 @@ document.addEventListener("DOMContentLoaded", function() {
             $('html, body').animate({
                 scrollTop: $("#contact").offset().top
             },1200)
-            $("#contact").css("font-size", "1rem")
+            
         })
-
+        $("#contact").mouseenter( function(){
+            $("#contact").css("font-size", "1rem")
+            $('html, body').animate({
+                scrollTop: $('#bottom').offset().top
+            })
+        } ).mouseleave( function(){
+            $("#contact").css("font-size", ".5rem")
+            
+        } )
         $(".chair").click(function(){
             $('html, body').animate({
                 scrollTop: $("#chair").offset().top
