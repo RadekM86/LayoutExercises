@@ -29,6 +29,12 @@ document.addEventListener("DOMContentLoaded", function() {
             };
         setInterval(text, 5000)
         
+        $(".chair").click(function(){
+            $('html, body').animate({
+                scrollTop: $("#chair").offset().top
+            },1200)
+        })
+
         $(".buyTop").click(function() {
             $('html, body').animate({
                 scrollTop: $(".buy").offset().top
