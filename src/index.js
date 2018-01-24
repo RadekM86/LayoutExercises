@@ -29,6 +29,14 @@ document.addEventListener("DOMContentLoaded", function() {
             };
         setInterval(text, 5000)
         
+ 
+        $(".contactButton").click(function(){
+            $('html, body').animate({
+                scrollTop: $("#contact").offset().top
+            },1200)
+            $("#contact").css("font-size", "1rem")
+        })
+
         $(".chair").click(function(){
             $('html, body').animate({
                 scrollTop: $("#chair").offset().top
